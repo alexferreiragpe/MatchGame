@@ -13,15 +13,15 @@ public class Home extends AppCompatActivity {
 
     Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16;
 
-    TextView txtacerto, txterro;
+    TextView txtAcerto, txtErro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        txtacerto = (TextView) findViewById(R.id.txtAcerto);
-        txterro = (TextView) findViewById(R.id.txtErros);
+        txtAcerto = (TextView) findViewById(R.id.txtAcerto);
+        txtErro = (TextView) findViewById(R.id.txtErros);
         bt1 = (Button) findViewById(R.id.btn1);
         bt2 = (Button) findViewById(R.id.btn2);
         bt3 = (Button) findViewById(R.id.btn3);
@@ -40,13 +40,13 @@ public class Home extends AppCompatActivity {
         bt16 = (Button) findViewById(R.id.btn16);
 
         final Button[] BotoesArray = new Button[]{bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16};
-        ArrayList ValoresArray = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8));
-        Collections.shuffle(ValoresArray);
+        ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8));
+        Collections.shuffle(BotoesValores);
 
-        for (int i = 0; i < ValoresArray.size(); i++) {
+        for (int i = 0; i < BotoesValores.size(); i++) {
             for (int j = 0; j < BotoesArray.length; j++) {
-                BotoesArray[j].setText(String.valueOf((ValoresArray.get(i))));
-                ValoresArray.remove(i);
+                BotoesArray[j].setText(String.valueOf((BotoesValores.get(i))));
+                BotoesValores.remove(i);
             }
         }
 
@@ -62,6 +62,27 @@ public class Home extends AppCompatActivity {
                 }
             });
         }
+
+        final int[] cont = {0};
+
+        for (int i = 0; i < BotoesArray.length; i++) {
+            final int finalI = i;
+
+            BotoesArray[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    cont[0]++;
+                   // if cont==1;
+
+                    BotoesArray[finalI].setTextColor(Color.parseColor("#000000"));
+
+
+
+                }
+            });
+        }
+
 
 
     }
