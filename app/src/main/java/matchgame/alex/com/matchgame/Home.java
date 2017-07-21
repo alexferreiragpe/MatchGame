@@ -6,14 +6,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+
 import static java.util.Arrays.asList;
+
 public class Home extends AppCompatActivity {
 
     Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16;
 
     TextView txtAcerto, txtErro;
+    int Acerto=0, Erro=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,51 +45,55 @@ public class Home extends AppCompatActivity {
         bt15 = (Button) findViewById(R.id.btn15);
         bt16 = (Button) findViewById(R.id.btn16);
 
-        final Button[] BotoesArray = new Button[]{bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16};
+        final Button[] Botoes = new Button[]{bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16};
         ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8));
         Collections.shuffle(BotoesValores);
+        final List ListaValoresBotaoClicado = new ArrayList();
 
         for (int i = 0; i < BotoesValores.size(); i++) {
-            for (int j = 0; j < BotoesArray.length; j++) {
-                BotoesArray[j].setText(String.valueOf((BotoesValores.get(i))));
+            for (int j = 0; j < Botoes.length; j++) {
+                Botoes[j].setText(String.valueOf((BotoesValores.get(i))));
                 BotoesValores.remove(i);
             }
         }
 
-
-        for (int i = 0; i < BotoesArray.length; i++) {
+        for (int i = 0; i < Botoes.length; i++) {
             final int finalI = i;
-            BotoesArray[i].setOnClickListener(new View.OnClickListener() {
+            Botoes[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    BotoesArray[finalI].setTextColor(Color.parseColor("#000000"));
+                    Botoes[finalI].setTextColor(Color.parseColor("#000000"));
+                    Botoes[finalI].setTag("0");
+                    ListaValoresBotaoClicado.add(Botoes[finalI].getText());
 
+                    if (ListaValoresBotaoClicado.size() == 2) {
+                        for (int i = 0; i < Botoes.length; i++) {
+                            if (Botoes[i].getTag() == "0" && (ListaValoresBotaoClicado.contains(Botoes[i].getText()))) {
+                                if (String.valueOf(ListaValoresBotaoClicado.get(0).toString()).equals(String.valueOf(ListaValoresBotaoClicado.get(1).toString()))) {
+                                    Botoes[i].setTextColor(Color.GRAY);
+                                    Botoes[i].setClickable(false);
+                                    Botoes[i].setTag("");
+                                    Acerto++;
 
+                                }
+                            } else {
+                                for (int k = 0; k < Botoes.length; k++) {
+                                    if (Botoes[k].getTag()=="0"){
+                                        Botoes[k].setTextColor(Color.TRANSPARENT);
+                                    }
+                                }
+                                Erro++;
+                            }
+                        }
+                        for (int j = 0; j < Botoes.length; j++) {
+                            Botoes[j].setTag("");
+                        }
+                        ListaValoresBotaoClicado.clear();
+                    }
+                    txtAcerto.setText(String.valueOf(" Acertos: "+Acerto));
+                    txtErro.setText(String.valueOf(" Erros: "+ Erro));
                 }
             });
         }
-
-        final int[] cont = {0};
-
-        for (int i = 0; i < BotoesArray.length; i++) {
-            final int finalI = i;
-
-            BotoesArray[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    cont[0]++;
-                   // if cont==1;
-
-                    BotoesArray[finalI].setTextColor(Color.parseColor("#000000"));
-
-
-
-                }
-            });
-        }
-
-
-
     }
 }
