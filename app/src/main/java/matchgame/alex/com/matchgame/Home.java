@@ -16,8 +16,7 @@ import static java.util.Arrays.asList;
 
 public class Home extends AppCompatActivity {
 
-    Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16;
-
+    Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16,btReiniciar;
     TextView txtAcerto, txtErro;
     int Acerto=0, Erro=0;
 
@@ -26,8 +25,10 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
+
         txtAcerto = (TextView) findViewById(R.id.txtAcerto);
         txtErro = (TextView) findViewById(R.id.txtErros);
+        btReiniciar=(Button)findViewById(R.id.btnReiniciar);
         bt1 = (Button) findViewById(R.id.btn1);
         bt2 = (Button) findViewById(R.id.btn2);
         bt3 = (Button) findViewById(R.id.btn3);
@@ -46,7 +47,7 @@ public class Home extends AppCompatActivity {
         bt16 = (Button) findViewById(R.id.btn16);
 
         final Button[] Botoes = new Button[]{bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16};
-        ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8));
+        final ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8));
         Collections.shuffle(BotoesValores);
         final List ListaValoresBotaoClicado = new ArrayList();
 
@@ -74,7 +75,6 @@ public class Home extends AppCompatActivity {
                                     Botoes[i].setClickable(false);
                                     Botoes[i].setTag("");
                                     Acerto++;
-
                                 }
                             } else {
                                 for (int k = 0; k < Botoes.length; k++) {
@@ -90,10 +90,39 @@ public class Home extends AppCompatActivity {
                         }
                         ListaValoresBotaoClicado.clear();
                     }
+                    if (Acerto==16){
+                        Toast.makeText(getApplicationContext(),"Parabéns! Você Conseguiu.",Toast.LENGTH_SHORT).show();
+                        btReiniciar.setVisibility(View.VISIBLE);
+                    }
                     txtAcerto.setText(String.valueOf(" Acertos: "+Acerto));
                     txtErro.setText(String.valueOf(" Erros: "+ Erro));
                 }
             });
         }
+
+        btReiniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btReiniciar.setVisibility(View.INVISIBLE);
+                final ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8));
+                Collections.shuffle(BotoesValores);
+                for (int i = 0; i < BotoesValores.size(); i++) {
+                    for (int j = 0; j < Botoes.length; j++) {
+                        Botoes[j].setText(String.valueOf((BotoesValores.get(i))));
+                        Botoes[j].setTextColor(Color.TRANSPARENT);
+                        BotoesValores.remove(i);
+                        if (Botoes[i].getTag() == "0" && (ListaValoresBotaoClicado.contains(Botoes[i].getText()))) {
+                            Botoes[i].setClickable(true);
+                            Botoes[i].setTag("");
+                        }
+                    }
+                }
+                Acerto=0;
+                Erro=0;
+                txtAcerto.setText(String.valueOf(" Acertos: "+Acerto));
+                txtErro.setText(String.valueOf(" Erros: "+ Erro));
+                ListaValoresBotaoClicado.clear();
+            }
+        });
     }
 }
