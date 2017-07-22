@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Match Game</string>
+    <string name="BtnReiniciar">Reiniciar</string>
 </resources>
