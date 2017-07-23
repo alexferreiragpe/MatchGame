@@ -16,19 +16,15 @@ import static java.util.Arrays.asList;
 
 public class Home extends AppCompatActivity {
 
-    Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16,btReiniciar;
-    TextView txtAcerto, txtErro;
-    int Acerto=0, Erro=0;
+    Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, btReiniciar;
+    int Acerto = 0, Erro = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-
-        txtAcerto = (TextView) findViewById(R.id.txtAcerto);
-        txtErro = (TextView) findViewById(R.id.txtErros);
-        btReiniciar=(Button)findViewById(R.id.btnReiniciar);
+        btReiniciar = (Button) findViewById(R.id.btnReiniciar);
         bt1 = (Button) findViewById(R.id.btn1);
         bt2 = (Button) findViewById(R.id.btn2);
         bt3 = (Button) findViewById(R.id.btn3);
@@ -65,6 +61,7 @@ public class Home extends AppCompatActivity {
                 public void onClick(View v) {
                     Botoes[finalI].setTextColor(Color.parseColor("#000000"));
                     Botoes[finalI].setTag("0");
+                    Botoes[finalI].setClickable(false);
                     ListaValoresBotaoClicado.add(Botoes[finalI].getText());
 
                     if (ListaValoresBotaoClicado.size() == 2) {
@@ -75,14 +72,17 @@ public class Home extends AppCompatActivity {
                                     Botoes[i].setClickable(false);
                                     Botoes[i].setTag("");
                                     Acerto++;
+                                }else {
+                                    Erro++;
                                 }
                             } else {
                                 for (int k = 0; k < Botoes.length; k++) {
-                                    if (Botoes[k].getTag()=="0"){
+                                    if (Botoes[k].getTag() == "0") {
                                         Botoes[k].setTextColor(Color.TRANSPARENT);
+                                        Botoes[k].setClickable(true);
                                     }
                                 }
-                                Erro++;
+
                             }
                         }
                         for (int j = 0; j < Botoes.length; j++) {
@@ -90,12 +90,12 @@ public class Home extends AppCompatActivity {
                         }
                         ListaValoresBotaoClicado.clear();
                     }
-                    if (Acerto==16){
-                        Toast.makeText(getApplicationContext(),"Parabéns! Você Conseguiu.",Toast.LENGTH_SHORT).show();
+
+
+                    if (Acerto == 16) {
+                        Toast.makeText(getApplicationContext(), " Parabéns! Você Conseguiu.\n Aproveitamento: "+(100-(((Erro*100)/16)-100))+"%", Toast.LENGTH_LONG).show();
                         btReiniciar.setVisibility(View.VISIBLE);
                     }
-                    txtAcerto.setText(String.valueOf(" Acertos: "+Acerto));
-                    txtErro.setText(String.valueOf(" Erros: "+ Erro));
                 }
             });
         }
@@ -104,23 +104,20 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btReiniciar.setVisibility(View.INVISIBLE);
+                Toast.makeText(getApplicationContext(), " Parabéns! Você Conseguiu.\n Aproveitamento: "+(100-(((Erro*100)/16)-100))+"%", Toast.LENGTH_LONG).show();
                 final ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8));
                 Collections.shuffle(BotoesValores);
                 for (int i = 0; i < BotoesValores.size(); i++) {
                     for (int j = 0; j < Botoes.length; j++) {
                         Botoes[j].setText(String.valueOf((BotoesValores.get(i))));
                         Botoes[j].setTextColor(Color.TRANSPARENT);
+                        Botoes[j].setClickable(true);
                         BotoesValores.remove(i);
-                        if (Botoes[i].getTag() == "0" && (ListaValoresBotaoClicado.contains(Botoes[i].getText()))) {
-                            Botoes[i].setClickable(true);
-                            Botoes[i].setTag("");
-                        }
+                        Botoes[j].setTag("");
                     }
                 }
-                Acerto=0;
-                Erro=0;
-                txtAcerto.setText(String.valueOf(" Acertos: "+Acerto));
-                txtErro.setText(String.valueOf(" Erros: "+ Erro));
+                Acerto = 0;
+                Erro = 0;
                 ListaValoresBotaoClicado.clear();
             }
         });

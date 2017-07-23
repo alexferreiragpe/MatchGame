@@ -11,55 +11,12 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tableLayout">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/txtAcerto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:text="Acertos:"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText,RtlHardcoded" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/txtErros"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:text="Erros:"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText,RtlHardcoded" />
-        </TableRow>
-
-
-    </TableLayout>
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tableLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:id="@+id/tableLayout2">
+        android:id="@+id/tableLayout2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="101dp">
 
         <TableRow
             android:layout_width="wrap_content"
@@ -253,6 +210,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="right"
         android:layout_marginTop="19dp"
+        android:background="@drawable/fundoazuledit"
         android:text="@string/BtnReiniciar"
         android:visibility="invisible"
         tools:ignore="RtlHardcoded" />
