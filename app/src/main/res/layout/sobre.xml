@@ -9,27 +9,47 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <TextSwitcher
             android:id="@+id/textSwitcher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="79dp"
-            android:layout_above="@+id/buttonNext"
-            android:layout_centerHorizontal="true" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="50dp">
+
+        </TextSwitcher>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="255dp">
 
         <Button
             android:id="@+id/buttonNext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textSwitcher"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/textSwitcher"
-            android:layout_marginBottom="208dp"
+            android:layout_above="@+id/textSwitcher"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/fundoazuledit"
-            android:text="Click"
-            android:textSize="25sp" />
+            android:text="Sobre"
+            android:textSize="20sp" />
     </RelativeLayout>
 
 </RelativeLayout>

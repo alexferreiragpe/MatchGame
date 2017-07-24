@@ -44,7 +44,8 @@
 
             <Button
                 android:id="@+id/btn3"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
                 android:textColor="@android:color/transparent"
@@ -213,6 +214,7 @@
         android:layout_marginTop="19dp"
         android:background="@drawable/botao_redondo"
         android:text="@string/BtnReiniciar"
+        android:textColor="#0000FF"
         android:textSize="15sp"
         android:visibility="invisible"
         tools:ignore="RtlHardcoded" />

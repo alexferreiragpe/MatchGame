@@ -206,15 +206,16 @@
         android:id="@+id/btnReiniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:background="@drawable/botao_redondo"
-        android:text="@string/BtnReiniciar"
-        android:textSize="15sp"
-        android:visibility="invisible"
-        tools:ignore="RtlHardcoded"
         android:layout_below="@+id/tableLayout2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp" />
+        android:layout_gravity="right"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/botao_redondo"
+        android:text="@string/BtnReiniciar"
+        android:textColor="#0000FF"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        tools:ignore="RtlHardcoded" />
 
     <ImageButton
         android:id="@+id/btSobre"

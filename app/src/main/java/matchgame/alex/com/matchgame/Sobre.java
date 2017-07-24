@@ -17,8 +17,8 @@ public class Sobre extends AppCompatActivity {
     private static TextSwitcher textswitcher;
 
     // String array to be shown on textSwitcher
-    String textToShow[] = { "Olá, sou o\n Alex Ferreira.", "Um Desenvolvedor Android.",
-            "Ainda estou estudando e aprendendo", "Fale comigo", "E-mail: \nalexferreiracp@gmail.com","Fone/Whats: \n+55-19-98803-0727","Obrigado por instalar meu app.","Viver é aprender todo dia!" };
+    String textToShow[] = { "Olá, sou o\n Alex Ferreira.", "Um Desenvolvedor Android Júnior",
+            "Ainda estou estudando e aprendendo","E-mail: \n\nalexferreiracp@gmail.com","Fone/Whats: \n\n+55-19-98803-0727","Viver é aprender todo dia!","Obrigado por instalar meu app." };
 
     // Total length of the string array
     int messageCount = textToShow.length;

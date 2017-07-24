@@ -1,13 +1,14 @@
 package matchgame.alex.com.matchgame;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -79,32 +80,56 @@ public class Home extends AppCompatActivity {
                         for (int i = 0; i < Botoes.length; i++) {
                             if (Botoes[i].getTag() == "0" && (ListaValoresBotaoClicado.contains(Botoes[i].getText()))) {
                                 if (String.valueOf(ListaValoresBotaoClicado.get(0).toString()).equals(String.valueOf(ListaValoresBotaoClicado.get(1).toString()))) {
-                                    Botoes[i].setTextColor(Color.GRAY);
+                                    Botoes[i].setTextColor(Color.BLUE);
                                     Botoes[i].setClickable(false);
                                     Botoes[i].setTag("");
                                     Acerto++;
                                 } else {
+
+                                   // final int finalK = k;
+                                    final int finalI1 = i;
+                                    Botoes[i].postDelayed(new Runnable() {
+                                        public void run() {
+                                            Botoes[finalI1].setTextColor(Color.TRANSPARENT);
+                                            Botoes[finalI1].setTag("");
+                                            Botoes[finalI1].setClickable(true);
+                                        }
+                                    }, 100);
+
+
                                     Erro++;
                                 }
                             } else {
+
                                 for (int k = 0; k < Botoes.length; k++) {
                                     if (Botoes[k].getTag() == "0") {
-                                        Botoes[k].setTextColor(Color.TRANSPARENT);
-                                        Botoes[k].setClickable(true);
+                                        // Botoes[k].setTextColor(Color.TRANSPARENT);
+
+
                                     }
                                 }
 
                             }
                         }
-                        for (int j = 0; j < Botoes.length; j++) {
-                            Botoes[j].setTag("");
-                        }
+
                         ListaValoresBotaoClicado.clear();
                     }
 
 
                     if (Acerto == 16) {
-                        Toast.makeText(getApplicationContext(), " Parabéns! Você Conseguiu.", Toast.LENGTH_LONG).show();
+                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
+                        alertDialog.setTitle("Match Game...");
+                        alertDialog.setMessage("Parabéns! Você Terminou.");
+                        alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+
+                            }
+                        });
+                        alertDialog.setIcon(R.drawable.icone);
+                        alertDialog.show();
                         btReiniciar.setVisibility(View.VISIBLE);
                     }
                 }
