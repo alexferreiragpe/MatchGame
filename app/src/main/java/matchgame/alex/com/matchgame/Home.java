@@ -1,11 +1,12 @@
 package matchgame.alex.com.matchgame;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ public class Home extends AppCompatActivity {
 
     Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, btReiniciar;
     int Acerto = 0, Erro = 0;
+    ImageButton btnSobre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.home);
 
         btReiniciar = (Button) findViewById(R.id.btnReiniciar);
+        btnSobre = (ImageButton) findViewById(R.id.btSobre);
         bt1 = (Button) findViewById(R.id.btn1);
         bt2 = (Button) findViewById(R.id.btn2);
         bt3 = (Button) findViewById(R.id.btn3);
@@ -54,8 +57,16 @@ public class Home extends AppCompatActivity {
             }
         }
 
+        btnSobre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, Sobre.class));
+            }
+        });
+
         for (int i = 0; i < Botoes.length; i++) {
             final int finalI = i;
+
             Botoes[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -72,7 +83,7 @@ public class Home extends AppCompatActivity {
                                     Botoes[i].setClickable(false);
                                     Botoes[i].setTag("");
                                     Acerto++;
-                                }else {
+                                } else {
                                     Erro++;
                                 }
                             } else {
@@ -93,7 +104,7 @@ public class Home extends AppCompatActivity {
 
 
                     if (Acerto == 16) {
-                        Toast.makeText(getApplicationContext(), " Parabéns! Você Conseguiu.\n Aproveitamento: "+(100-(((Erro*100)/16)-100))+"%", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), " Parabéns! Você Conseguiu.", Toast.LENGTH_LONG).show();
                         btReiniciar.setVisibility(View.VISIBLE);
                     }
                 }
@@ -104,7 +115,6 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btReiniciar.setVisibility(View.INVISIBLE);
-                Toast.makeText(getApplicationContext(), " Parabéns! Você Conseguiu.\n Aproveitamento: "+(100-(((Erro*100)/16)-100))+"%", Toast.LENGTH_LONG).show();
                 final ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8));
                 Collections.shuffle(BotoesValores);
                 for (int i = 0; i < BotoesValores.size(); i++) {

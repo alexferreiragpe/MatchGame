@@ -2,21 +2,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimary"
     tools:context="matchgame.alex.com.matchgame.Home">
 
 
     <TableLayout
+        android:id="@+id/tableLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:id="@+id/tableLayout2"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp">
+        android:layout_alignParentStart="true">
 
         <TableRow
             android:layout_width="wrap_content"
@@ -200,26 +200,33 @@
 
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal">
-
-            <Button
-                android:id="@+id/btnReiniciar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tableLayout2"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="right"
-                android:background="@drawable/fundoazuledit"
-                android:text="@string/BtnReiniciar"
-                android:textSize="10sp"
-                android:visibility="invisible"
-                tools:ignore="RtlHardcoded" />
-        </TableRow>
-
     </TableLayout>
+
+    <Button
+        android:id="@+id/btnReiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/botao_redondo"
+        android:text="@string/BtnReiniciar"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        tools:ignore="RtlHardcoded"
+        android:layout_below="@+id/tableLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp" />
+
+    <ImageButton
+        android:id="@+id/btSobre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/botao_redondo_sobre"
+        app:srcCompat="@android:drawable/ic_menu_info_details"
+        android:layout_alignBottom="@+id/btnReiniciar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
