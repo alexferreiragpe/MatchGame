@@ -18,7 +18,7 @@ import static java.util.Arrays.asList;
 
 public class Home extends AppCompatActivity {
 
-    Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, btReiniciar;
+    Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, bt17, bt18, bt19, bt20, bt21, bt22, bt23, bt24, bt25, bt26, bt27, bt28, bt29, bt30, btReiniciar;
     int Acerto = 0, Erro = 0;
     ImageButton btnSobre;
 
@@ -45,9 +45,23 @@ public class Home extends AppCompatActivity {
         bt14 = (Button) findViewById(R.id.btn14);
         bt15 = (Button) findViewById(R.id.btn15);
         bt16 = (Button) findViewById(R.id.btn16);
+        bt17 = (Button) findViewById(R.id.btn17);
+        bt18 = (Button) findViewById(R.id.btn18);
+        bt19 = (Button) findViewById(R.id.btn19);
+        bt20 = (Button) findViewById(R.id.btn20);
+        bt21 = (Button) findViewById(R.id.btn21);
+        bt22 = (Button) findViewById(R.id.btn22);
+        bt23 = (Button) findViewById(R.id.btn23);
+        bt24 = (Button) findViewById(R.id.btn24);
+        bt25 = (Button) findViewById(R.id.btn25);
+        bt26 = (Button) findViewById(R.id.btn26);
+        bt27 = (Button) findViewById(R.id.btn27);
+        bt28 = (Button) findViewById(R.id.btn28);
+        bt29 = (Button) findViewById(R.id.btn29);
+        bt30 = (Button) findViewById(R.id.btn30);
 
-        final Button[] Botoes = new Button[]{bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16};
-        final ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8));
+        final Button[] Botoes = new Button[]{bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, bt17, bt18, bt19, bt20, bt21, bt22, bt23, bt24, bt25, bt26, bt27, bt28, bt29, bt30};
+        final ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15));
         Collections.shuffle(BotoesValores);
         final List ListaValoresBotaoClicado = new ArrayList();
 
@@ -86,7 +100,7 @@ public class Home extends AppCompatActivity {
                                     Acerto++;
                                 } else {
 
-                                   // final int finalK = k;
+                                    // final int finalK = k;
                                     final int finalI1 = i;
                                     Botoes[i].postDelayed(new Runnable() {
                                         public void run() {
@@ -116,7 +130,7 @@ public class Home extends AppCompatActivity {
                     }
 
 
-                    if (Acerto == 16) {
+                    if (Acerto == 30) {
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
                         alertDialog.setTitle("Match Game...");
                         alertDialog.setMessage("Parabéns! Você Terminou.");
@@ -140,7 +154,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 btReiniciar.setVisibility(View.INVISIBLE);
-                final ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8));
+                final ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15));
                 Collections.shuffle(BotoesValores);
                 for (int i = 0; i < BotoesValores.size(); i++) {
                     for (int j = 0; j < Botoes.length; j++) {
