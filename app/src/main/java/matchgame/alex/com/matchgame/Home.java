@@ -72,12 +72,7 @@ public class Home extends AppCompatActivity {
             }
         }
 
-        btnSobre.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Home.this, Sobre.class));
-            }
-        });
+
 
         for (int i = 0; i < Botoes.length; i++) {
             final int finalI = i;
@@ -168,6 +163,13 @@ public class Home extends AppCompatActivity {
                 Acerto = 0;
                 Erro = 0;
                 ListaValoresBotaoClicado.clear();
+            }
+        });
+
+        btnSobre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, Sobre.class));
             }
         });
     }
