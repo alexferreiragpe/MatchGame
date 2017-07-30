@@ -21,6 +21,7 @@ public class Home extends AppCompatActivity {
     Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, bt17, bt18, bt19, bt20, bt21, bt22, bt23, bt24, bt25, bt26, bt27, bt28, bt29, bt30, btReiniciar;
     int Acerto = 0, Erro = 0;
     ImageButton btnSobre;
+    final List ListaValoresBotaoClicado = new ArrayList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,15 +61,30 @@ public class Home extends AppCompatActivity {
         bt29 = (Button) findViewById(R.id.btn29);
         bt30 = (Button) findViewById(R.id.btn30);
 
-        final Button[] Botoes = new Button[]{bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, bt17, bt18, bt19, bt20, bt21, bt22, bt23, bt24, bt25, bt26, bt27, bt28, bt29, bt30};
-        final ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15));
+        final Button[] Botoes = new Button[]{bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10,
+                bt11, bt12, bt13, bt14, bt15, bt16, bt17, bt18, bt19, bt20,
+                bt21, bt22, bt23, bt24, bt25, bt26, bt27, bt28, bt29, bt30};
+        final ArrayList BotoesValores = new ArrayList(asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8,
+                9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15));
+
         Collections.shuffle(BotoesValores);
-        final List ListaValoresBotaoClicado = new ArrayList();
+
+
 
         for (int i = 0; i < BotoesValores.size(); i++) {
             for (int j = 0; j < Botoes.length; j++) {
                 Botoes[j].setText(String.valueOf((BotoesValores.get(i))));
                 BotoesValores.remove(i);
+                final int finalJ = j;
+                Botoes[finalJ].postDelayed(new Runnable() {
+                    public void run() {
+                        Botoes[finalJ].setTextColor(Color.TRANSPARENT);
+                        Botoes[finalJ].setTag("");
+                        Botoes[finalJ].setClickable(true);
+                    }
+                }, 3000);
+
+
             }
         }
 
@@ -103,7 +119,7 @@ public class Home extends AppCompatActivity {
                                             Botoes[finalI1].setTag("");
                                             Botoes[finalI1].setClickable(true);
                                         }
-                                    }, 100);
+                                    }, 1000);
 
 
                                     Erro++;

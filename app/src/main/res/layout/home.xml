@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -140,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -150,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -160,7 +160,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -170,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -180,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -196,7 +196,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -206,7 +206,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -216,7 +216,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -226,7 +226,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -236,7 +236,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -252,7 +252,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -262,7 +262,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -272,7 +272,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -282,7 +282,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -292,7 +292,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -307,7 +307,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -317,7 +317,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -327,7 +327,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -337,7 +337,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
@@ -347,7 +347,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="1"
-                android:textColor="@android:color/transparent"
+                android:textColor="@android:color/black"
                 android:textSize="20sp"
                 tools:ignore="ButtonStyle" />
 
