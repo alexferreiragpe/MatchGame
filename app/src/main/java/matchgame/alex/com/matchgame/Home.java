@@ -3,7 +3,9 @@ package matchgame.alex.com.matchgame;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,10 +21,10 @@ import static java.util.Arrays.asList;
 public class Home extends AppCompatActivity {
 
     Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, bt17, bt18, bt19, bt20, bt21, bt22, bt23, bt24, bt25, bt26, bt27, bt28, bt29, bt30, btReiniciar;
-    int Acerto = 0, Erro = 0;
+    int Acerto = 0, Erro = 0,total=0;
     ImageButton btnSobre;
     final List ListaValoresBotaoClicado = new ArrayList();
-
+    final String iconeescondeimagem = (String.valueOf(R.drawable.estrela));
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +83,7 @@ public class Home extends AppCompatActivity {
                         Botoes[finalJ].setTextColor(Color.TRANSPARENT);
                         Botoes[finalJ].setTag("");
                         Botoes[finalJ].setClickable(true);
+                        Botoes[finalJ].setBackgroundResource(Integer.parseInt(iconeescondeimagem));
                     }
                 }, 3000);
 
@@ -94,9 +97,12 @@ public class Home extends AppCompatActivity {
             final int finalI = i;
 
             Botoes[i].setOnClickListener(new View.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
                 @Override
                 public void onClick(View v) {
                     Botoes[finalI].setTextColor(Color.parseColor("#000000"));
+                    Botoes[finalI].setBackground(null);
+                    Botoes[finalI].setBackgroundColor(Color.CYAN);
                     Botoes[finalI].setTag("0");
                     Botoes[finalI].setClickable(false);
                     ListaValoresBotaoClicado.add(Botoes[finalI].getText());
@@ -105,7 +111,8 @@ public class Home extends AppCompatActivity {
                         for (int i = 0; i < Botoes.length; i++) {
                             if (Botoes[i].getTag() == "0" && (ListaValoresBotaoClicado.contains(Botoes[i].getText()))) {
                                 if (String.valueOf(ListaValoresBotaoClicado.get(0).toString()).equals(String.valueOf(ListaValoresBotaoClicado.get(1).toString()))) {
-                                    Botoes[i].setTextColor(Color.BLUE);
+                                    Botoes[i].setTextColor(Color.BLACK);
+                                    Botoes[i].setBackgroundColor(Color.GREEN);
                                     Botoes[i].setClickable(false);
                                     Botoes[i].setTag("");
                                     Acerto=Acerto+1;
@@ -113,9 +120,17 @@ public class Home extends AppCompatActivity {
                                     final int finalI1 = i;
                                     Botoes[i].postDelayed(new Runnable() {
                                         public void run() {
-                                            Botoes[finalI1].setTextColor(Color.TRANSPARENT);
-                                            Botoes[finalI1].setTag("");
-                                            Botoes[finalI1].setClickable(true);
+
+
+                                            for (int i=0;i<Botoes.length;i++){
+                                                if (Botoes[i].getTag().equals("0")){
+                                                    Botoes[i].setBackgroundResource(Integer.parseInt(iconeescondeimagem));
+                                                    Botoes[i].setTag("");
+                                                    Botoes[i].setClickable(true);
+                                                    Botoes[i].setTextColor(Color.TRANSPARENT);
+                                                }
+                                            }
+
                                         }
                                     }, 1000);
 
@@ -130,9 +145,10 @@ public class Home extends AppCompatActivity {
 
 
                     if (Acerto == 30) {
+                        total=((Erro*100)/(Acerto+Erro));
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
                         alertDialog.setTitle("Match Game...");
-                        alertDialog.setMessage("Parabéns! Você Terminou.");
+                        alertDialog.setMessage("Parabéns! \n\nVocê Conseguiu" + "\n\nAcertos: " + Acerto + "\nErros:   " + Erro+"\n\nAproveitamento: "+total+"%");
                         alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
                             @Override
@@ -158,15 +174,30 @@ public class Home extends AppCompatActivity {
                 for (int i = 0; i < BotoesValores.size(); i++) {
                     for (int j = 0; j < Botoes.length; j++) {
                         Botoes[j].setText(String.valueOf((BotoesValores.get(i))));
-                        Botoes[j].setTextColor(Color.TRANSPARENT);
+                        Botoes[j].setTextColor(Color.BLACK);
                         Botoes[j].setClickable(true);
                         BotoesValores.remove(i);
                         Botoes[j].setTag("");
+                        Botoes[j].setBackgroundColor(Color.CYAN);
+
+                        final int finalJ = j;
+                        Botoes[j].postDelayed(new Runnable() {
+                            public void run() {
+
+                                Botoes[finalJ].setTextColor(Color.TRANSPARENT);
+                                Botoes[finalJ].setTag("");
+                                Botoes[finalJ].setClickable(true);
+                                Botoes[finalJ].setBackgroundResource(Integer.parseInt(iconeescondeimagem));
+                            }
+                        }, 3000);
+
                     }
                 }
                 Acerto = 0;
                 Erro = 0;
+                total=0;
                 ListaValoresBotaoClicado.clear();
+
             }
         });
 

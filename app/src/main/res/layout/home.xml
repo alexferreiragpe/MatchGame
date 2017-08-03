@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/btnSobre"
+    android:id="@+id/Layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
@@ -13,342 +13,425 @@
         android:id="@+id/tableLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_marginTop="67dp"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="101dp"
-        android:gravity="center">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/holo_blue_dark">
 
             <Button
                 android:id="@+id/btn1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn2"
-                android:layout_width="match_parent"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_blue_dark">
 
             <Button
                 android:id="@+id/btn5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_blue_dark">
 
             <Button
                 android:id="@+id/btn9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_blue_dark">
 
             <Button
                 android:id="@+id/btn13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_blue_dark">
 
             <Button
                 android:id="@+id/btn17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/holo_blue_dark">
 
             <Button
                 android:id="@+id/btn26"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn27"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn29"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/btn30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="ButtonStyle" />
 
         </TableRow>
@@ -374,14 +457,13 @@
         android:id="@+id/btSobre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
-        android:layout_marginTop="17dp"
         android:background="@drawable/botao_redondo_sobre"
-        app:srcCompat="@android:drawable/ic_menu_info_details" />
+        app:srcCompat="@android:drawable/ic_menu_info_details"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="29dp"
+        android:layout_marginEnd="29dp" />
 
 
 </RelativeLayout>
