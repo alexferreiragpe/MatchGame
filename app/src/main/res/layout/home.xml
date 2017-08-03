@@ -460,10 +460,8 @@
         android:background="@drawable/botao_redondo_sobre"
         app:srcCompat="@android:drawable/ic_menu_info_details"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="29dp"
-        android:layout_marginEnd="29dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
 
 
 </RelativeLayout>

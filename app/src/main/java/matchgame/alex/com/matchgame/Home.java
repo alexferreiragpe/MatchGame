@@ -20,11 +20,12 @@ import static java.util.Arrays.asList;
 
 public class Home extends AppCompatActivity {
 
-    Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, bt17, bt18, bt19, bt20, bt21, bt22, bt23, bt24, bt25, bt26, bt27, bt28, bt29, bt30, btReiniciar;
-    int Acerto = 0, Erro = 0,total=0;
-    ImageButton btnSobre;
     final List ListaValoresBotaoClicado = new ArrayList();
-    final String iconeescondeimagem = (String.valueOf(R.drawable.estrela));
+    final String iconeescondeimagem = (String.valueOf(R.drawable.interrogacao));
+    Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12, bt13, bt14, bt15, bt16, bt17, bt18, bt19, bt20, bt21, bt22, bt23, bt24, bt25, bt26, bt27, bt28, bt29, bt30, btReiniciar;
+    int Acerto = 0, Erro = 0, total = 0;
+    ImageButton btnSobre;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +73,6 @@ public class Home extends AppCompatActivity {
         Collections.shuffle(BotoesValores);
 
 
-
         for (int i = 0; i < BotoesValores.size(); i++) {
             for (int j = 0; j < Botoes.length; j++) {
                 Botoes[j].setText(String.valueOf((BotoesValores.get(i))));
@@ -86,16 +86,11 @@ public class Home extends AppCompatActivity {
                         Botoes[finalJ].setBackgroundResource(Integer.parseInt(iconeescondeimagem));
                     }
                 }, 3000);
-
-
             }
         }
 
-
-
         for (int i = 0; i < Botoes.length; i++) {
             final int finalI = i;
-
             Botoes[i].setOnClickListener(new View.OnClickListener() {
                 @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
                 @Override
@@ -106,7 +101,6 @@ public class Home extends AppCompatActivity {
                     Botoes[finalI].setTag("0");
                     Botoes[finalI].setClickable(false);
                     ListaValoresBotaoClicado.add(Botoes[finalI].getText());
-
                     if (ListaValoresBotaoClicado.size() == 2) {
                         for (int i = 0; i < Botoes.length; i++) {
                             if (Botoes[i].getTag() == "0" && (ListaValoresBotaoClicado.contains(Botoes[i].getText()))) {
@@ -115,15 +109,15 @@ public class Home extends AppCompatActivity {
                                     Botoes[i].setBackgroundColor(Color.GREEN);
                                     Botoes[i].setClickable(false);
                                     Botoes[i].setTag("");
-                                    Acerto=Acerto+1;
+                                    Acerto = Acerto + 1;
                                 } else {
                                     final int finalI1 = i;
                                     Botoes[i].postDelayed(new Runnable() {
                                         public void run() {
 
 
-                                            for (int i=0;i<Botoes.length;i++){
-                                                if (Botoes[i].getTag().equals("0")){
+                                            for (int i = 0; i < Botoes.length; i++) {
+                                                if (Botoes[i].getTag().equals("0")) {
                                                     Botoes[i].setBackgroundResource(Integer.parseInt(iconeescondeimagem));
                                                     Botoes[i].setTag("");
                                                     Botoes[i].setClickable(true);
@@ -134,7 +128,7 @@ public class Home extends AppCompatActivity {
                                         }
                                     }, 1000);
 
-                                    Erro=Erro+1;
+                                    Erro = Erro + 1;
 
                                 }
                             }
@@ -145,10 +139,10 @@ public class Home extends AppCompatActivity {
 
 
                     if (Acerto == 30) {
-                        total=((Erro*100)/(Acerto+Erro));
+                        total = ((Acerto * 100) / (Acerto + Erro));
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
                         alertDialog.setTitle("Match Game...");
-                        alertDialog.setMessage("Parabéns! \n\nVocê Conseguiu" + "\n\nAcertos: " + Acerto + "\nErros:   " + Erro+"\n\nAproveitamento: "+total+"%");
+                        alertDialog.setMessage("Parabéns! \n\nVocê Conseguiu" + "\n\nAcertos: " + Acerto + "\nErros:   " + Erro + "\n\nAproveitamento: " + total + "%");
                         alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
                             @Override
@@ -195,7 +189,7 @@ public class Home extends AppCompatActivity {
                 }
                 Acerto = 0;
                 Erro = 0;
-                total=0;
+                total = 0;
                 ListaValoresBotaoClicado.clear();
 
             }
