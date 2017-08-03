@@ -108,10 +108,8 @@ public class Home extends AppCompatActivity {
                                     Botoes[i].setTextColor(Color.BLUE);
                                     Botoes[i].setClickable(false);
                                     Botoes[i].setTag("");
-                                    Acerto++;
+                                    Acerto=Acerto+1;
                                 } else {
-
-                                    // final int finalK = k;
                                     final int finalI1 = i;
                                     Botoes[i].postDelayed(new Runnable() {
                                         public void run() {
@@ -121,19 +119,9 @@ public class Home extends AppCompatActivity {
                                         }
                                     }, 1000);
 
+                                    Erro=Erro+1;
 
-                                    Erro++;
                                 }
-                            } else {
-
-                                for (int k = 0; k < Botoes.length; k++) {
-                                    if (Botoes[k].getTag() == "0") {
-                                        // Botoes[k].setTextColor(Color.TRANSPARENT);
-
-
-                                    }
-                                }
-
                             }
                         }
 
