@@ -95,11 +95,15 @@ public class Home extends AppCompatActivity {
                 @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
                 @Override
                 public void onClick(View v) {
+                    if (ListaValoresBotaoClicado.size()>2){
+                        ListaValoresBotaoClicado.clear();
+                    }
+                    Botoes[finalI].setClickable(false);
                     Botoes[finalI].setTextColor(Color.parseColor("#000000"));
                     Botoes[finalI].setBackground(null);
                     Botoes[finalI].setBackgroundColor(Color.CYAN);
                     Botoes[finalI].setTag("0");
-                    Botoes[finalI].setClickable(false);
+
                     ListaValoresBotaoClicado.add(Botoes[finalI].getText());
                     if (ListaValoresBotaoClicado.size() == 2) {
                         for (int i = 0; i < Botoes.length; i++) {
@@ -126,7 +130,7 @@ public class Home extends AppCompatActivity {
                                             }
 
                                         }
-                                    }, 1000);
+                                    }, 200);
 
                                     Erro = Erro + 1;
 
@@ -142,7 +146,7 @@ public class Home extends AppCompatActivity {
                         total = ((Acerto * 100) / (Acerto + Erro));
                         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Home.this);
                         alertDialog.setTitle("Match Game...");
-                        alertDialog.setMessage("Parabéns! \n\nVocê Conseguiu" + "\n\nAcertos: " + Acerto + "\nErros:   " + Erro + "\n\nAproveitamento: " + total + "%");
+                        alertDialog.setMessage("Parabéns! \n\nVocê Conseguiu" + "\n\n\nSeu Aproveitamento foi de: " + total + "%");
                         alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 
                             @Override
